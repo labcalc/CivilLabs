@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Concrete Lab</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<div class="mainlabs">
+    <div class="navbar">
+        <div class="icon">
+            <h2 class="logo">Civil Labs</h2>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><a href="https://civilread.com/iscodes-pdf/"target="_blank"rel="noopener">Code books</a></li>
+                <li><a href="#"></a></li>
+                <li>
+                    <a href = "#">calculators</a>
+                    <ul class="dropdown">
+                        <li><a href="#TE">..</a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </li>
+                <li><a href = "#">About_us</a></li>
+            </ul>
+        </div>
+
+        <div class="search">
+            <input class="srch" type="search" name="" placeholder="Type To text">
+            <a href="#"> 
+            <button class="btn">Search</button></a>
+        </div>
+    </div>
+
+
+   <div class="content" id="specificgravityofaggregates">
+      <h1>specific gravity of aggregates</h1>
+      <p class="par">Specific Gravity is the ratio of the weight of a given volume <br>
+         of aggregate to the weight of an equal volume of water. Water, at a temperature of 73.4°F (23°C) has a <br>
+         specific gravity of  Specific Gravity is important for several reasons.<br>
+         Some deleterious particles are lighter than the good aggregates.</p>
+
+
+        <div class="form">
+          <form id="concrete">
+              <h2>specific gravity of aggregates</h2>
+              <h1>weight of empty pycnometer in (Kg) :</h1> <input type="text"
+              id="valw1" /><br>
+              <h1>weight of pycnometer + dry aggregate in (Kg): </h1><input type="text" 
+              id="valw2" /><br>
+              <h1>weight of pycnometer + dry aggregate + water in (Kg): </h1><input type="text" 
+              id="valw3" /><br>
+              <h1>weight of empty pycnometer + water in (Kg): </h1><input type="text" 
+              id="valw4" /><br>
+              <input class='btn' type="button" onClick="specificgravityofaggregates()" 
+               Value="calculate" />
+            </form>
+  
+            <p><h2>The Result is : <br>
+              <span id = "G"></span></h2>
+            </p>
+  
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+<script>
+
+function specificgravityofaggregates() 
+    { 
+      var ww1 = Number(document.getElementById(
+        "valw1").value);
+      var ww2 = Number(document.getElementById(
+        "valw2").value);
+      var ww3 = Number(document.getElementById(
+        "valw3").value);
+      var ww4 =Number(document.getElementById(
+        "valw4").value);
+      g=(ww2-ww1);
+      s=((ww4-ww1)-(ww3-ww2));
+      G=g/s
+
+      document.getElementById(
+        "G").innerHTML = G
+    }
+
+</script>

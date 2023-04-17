@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Concrete Lab</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<div class="mainlabs">
+    <div class="navbar">
+        <div class="icon">
+            <h2 class="logo">Civil Labs</h2>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><a href="https://civilread.com/iscodes-pdf/"target="_blank"rel="noopener">Code books</a></li>
+                <li><a href="#"></a></li>
+                <li>
+                    <a href = "#">calculators</a>
+                    <ul class="dropdown">
+                        <li><a href="#TE">..</a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </li>
+                <li><a href = "#">About_us</a></li>
+            </ul>
+        </div>
+
+        <div class="search">
+            <input class="srch" type="search" name="" placeholder="Type To text">
+            <a href="#"> 
+            <button class="btn">Search</button></a>
+        </div>
+    </div>
+
+    
+        <div class="card-container">
+          <div class="card" onclick="showDetails(this)">
+           <img src="concretett.jpg" alt="Image" class="card-img">
+           <div class="card-content">
+              <h2 class="card-title">Tests on concrete</h2>
+             <p class="card-text">.</p>
+             <button class="btnof" onclick="showconcrete()">compressive strength</a></button>
+             <button class="btnof" onclick="showflowtable()">Flow table test</a></button>
+             <button class="btnof" onclick="showflexuralstrength()">Flexural strength</button>
+             <!--<button class="btn" onclick="settingtime()">settingtime</a></button>-->
+             <button class="btnof" onclick="showsplittensile()">splittensilestrength</a></button>
+
+           </div>
+           <div class="card-details">
+             <p>Details will be shown here</p>
+            </div>
+         </div>
+
+          <div class="card" onclick="showDetails(this)">
+            <img src="cemetest.jpg" alt="Image" class="card-img">
+           <div class="card-content">
+              <h2 class="card-title">Tests on cement</h2>
+              <button class="btnof" onclick="showfineness()">fineness of cement </button>
+              <button class="btnof" onclick="showsg()">specific gravity</button>
+
+            </div>
+            <div class="card-details">
+              <p>Details will be shown here</p>
+            </div>
+          </div>
+
+
+         <div class="card" onclick="showDetails(this)">
+            <img src="Aggregates.jpg" alt="Image" class="card-img">
+           <div class="card-content">
+              <h2 class="card-title">Tests on aggregate</h2>
+              <p class="card-text">.</p>
+             
+             <button class="btnof" onclick="showbulkingofsand()" >Bulking of sand</button>
+             <button class="btnof" onclick="showunitweight()">unit weight of aggregates</button>
+             <button class="btnof" onclick="showsgc()">specific gravity of aggregates</button>
+
+            </div>
+           <div class="card-details">
+              <p>Details will be shown here</p>
+            </div>
+          </div>
+
+
+      
+         <!-- Add more cards here -->
+        </div>
+    
+
+
+
+
+
+
+    <div class="content" id="compressivetest" style="display:none;">
+        <h1>Compressive strength</h1>
+        
+        <p class="par">Compressive strength is the ability of material or structure to carry the loads on its surface without any crack or deflection.
+          <br>A material under compression tends to reduce the size. 
+          Concrete compressive strength for general construction varies from<br> 15 MPa (2200 psi) to 30 MPa (4400 psi) and higher in commercial and industrial structures.
+          </p>
+
+          <center><iframe width="560" height="315" src="https://www.youtube.com/embed/yzpWGrh9j6Y"
+            title="YouTube video player" frameborder="5"
+            allow="accelerometer; autoplay; " 
+            allowfullscreen></iframe>
+          </center>
+          <!--<button class="btn" onclick="showDiv()">Calculator </button>-->
+        <p class="par">The formula to calculate compressive strength is
+        </p>
+         ̌<h2 style="color: black" >F = P/A </h2>,
+        <p class="par">F=The compressive strength (MPa)
+             <br> P=Maximum load (or load until failure) to 
+             <br>the material (N) A=A cross section of the area of the material resisting the load (mm2)
+        </p>
+
+            
+    
+          <div class="form" id="asz">
+            <form id="concrete">
+                <h2>Compressive strength</h2>
+                <h1>Enter the breadth in (mm):</h1> <input type="text"
+                id="firstNumber" /><br>
+                <h1>Enter the depth in (mm): </h1><input type="text" 
+                id="secondNumber" /><br>
+                <h1>Enter the failure load for sample 1 in (N): </h1><input type="text" 
+                id="third number" /><br>
+                <h1>Enter the failure load for sample 2 in (N) :</h1><input type="text" 
+                id="fourth number" /><br>
+                <h1>Enter the failure loadfor sample 3 in (N): </h1><input type="text" 
+                id="fifth number" /><br>
+                
+                <input class='btn' type="button" onClick="concretetest()" 
+                 Value="calculate" />
+            </form>
+
+             
+              <p><h2>The Result is in (N/mm^2) : <br>
+                <span id = "resultloa"></span></h2>
+              </p>
+
+
+          </div>
+
+
+    </div>
+
+
+
+    <div class="content" id="specificgravity" style="display: none;">
+      <h1>Specific Gravity of cement</h1>
+      <p class="par">The  specific gravity of cement is the weight of particular volume of cement , compared to the weight of the very small amount of water at the given temperature .
+        <br> for cement , specific gravity lies at the 3.15 g/cc that indicates that the cement is 3.15 times heavier
+        <br> than the same volume of the water.</p>
+        <center> <iframe width="560" height="315" src="https://www.youtube.com/embed/Ql5U1k9Sxhg" 
+          title="YouTube video player" frameborder="0" 
+          allow="accelerometer; autoplay; 
+          clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </center>
+      
+
+  
+      <div class="form" >
+          <form id="concrete">
+              <h2>Specific Gravity of cement</h2>
+              <h1>Enter the weight of empty flask, W1 in (gm):</h1> <input type="text"
+              id="W1" /><br>
+              <h1> Weight of cement in flask,W2 in (gm): </h1><input type="text" 
+              id="W2" /><br>
+              <h1>Enter the weight of mixture of kerosene to the sample,W3 in (gm) : </h1><input type="text" 
+              id="W3" /><br>
+              <h1>Enter the weight of kerosene only in the bottle to the tip,W4 in (gm): </h1><input type="text" 
+              id="W4" /><br>
+              <h1>Enter the weight of kerosene only in the bottle to the tip,W5 in (gm): </h1><input type="text" 
+              id="W5" /><br>
+              <input class='btn' type="button" onClick="SpecificGravity()" 
+               Value="calculate" />
+          </form>
+  
+            <p><h2>The Result is : <br>
+              <span id = "Sg"></span></h2>
+           </p>
+  
+      </div>
+      
+    </div>
+
+   <div class="content" id="splittensile" style="display: none;">
+     <h1>split tensile strength</h1>
+     <p class="par">The split tensile test is an indirect way of evaluating the tensile test of concrete. In this test, 
+          a standard cylindrical specimen is laid horizontally,<br>and the force is applied on the cylinder radially on the surface which causes 
+         the formation of a vertical crack in the specimen along its diameter.</p>
+        <center><iframe width="560" height="315" src="https://www.youtube.com/embed/UIcMUJzTHUE" 
+         title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+         clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </center>
+  
+     <div class="form">
+       <form id="concrete">
+           <h2>split tensile strength</h2>
+           <h1>enter the load at failure :</h1> <input type="text"
+           id="P" /><br>
+           <h1> enter the diameter of the specimen: </h1><input type="text" 
+           id="D" /><br>
+           <h1>enter the length of the specimen: </h1><input type="text" 
+           id="L" /><br>
+           <input class='btn' type="button" onClick="splittensilestrength()"
+            Value="calculate" />
+       </form>
+
+       <p><h2>The Result is : <br>
+         <span id = "S"></span></h2>
+       </p>
+        
+      </div>
+    </div>
+
+   <div class="content" id="fineness" style="display: none;">
+     <h1>FINENESS OF CEMENT</h1>
+     <p class="par">The fineness of cement is a measure of cement particle size and is denoted in terms of the specific surface area of cement. 
+        <br> The Fineness Test of Cement is done by sieving cement samples through a standard IS sieve.
+       <br>The weight of a cement particle whose size is greater than 90 microns is determined. Then the percentage of retained cement particles is calculated.</p>
+       <center> <iframe width="560" height="315" src="https://www.youtube.com/embed/e9XX7993eh8" 
+         title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+          clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+       </center>
+  
+     <div class="form">
+         <form id="concrete">
+             <h2>FINENESS OF CEMENT</h2>
+             <h1>Enter weight of cement taken in grams :</h1> <input type="text"
+             id="retainwg" /><br>
+             <h1>Enter weight retained on seive in grams: </h1><input type="text" 
+             id="retainse" /><br>
+             <input type="button" onClick="FINESSOFCEMENT()" 
+              Value="Divide" />
+           </form>
+  
+          <p><h2>The Result is in %: <br>
+            <span id = "result" ></span></h2>
+          </p>
+         
+  
+      </div>
+    
+    </div>
+
+
+
+
+
+  <div class="content" id="Bulkingofsand" style="display: none;">
+    <h1>Bulking of sand</h1>
+    <p class="par"><br>The increase in the volume of sand due to increase in moisture content is called bulking of sand. A film of water
+      <br> is created around the sand particles which forces the particles to get a side from each other and thus the volume is increased  
+      <br>  Five to eight percent of the increase in moisture in the sand can increase the volume of sand up to 20 to 40 percent. 
+      </p>
+        <center><iframe width="560" height="315" src="https://www.youtube.com/embed/G7zXDCDcsRc"
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+          clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </center>
+
+
+      <div class="form">
+        <form id="concrete">
+            <h2>Bulking of sand</h2>
+            <h1>Volume of the sand & water in the container :</h1> <input type="text"
+            id="v1" /><br>
+            <h1>Volume of the sand & water : </h1><input type="text" 
+            id="1v2" /><br>
+            <h1>Volume of the sand in water: </h1><input type="text" 
+            id="2v2" /><br>
+            <h1>Volume of the sand in water: </h1><input type="text" 
+            id="3v2" /><br>
+            <h1>Volume of the sand in water: </h1><input type="text" 
+            id="4v2" /><br>
+            <h1>Volume of the sand in water: </h1><input type="text" 
+            id="5v2" /><br>
+            <input class='btn' type="button" onClick="Bulkingofsand()" 
+             Value="calculate" />
+          </form>
+
+          <p><h2>The maximum percentage raise : <br>
+            <span id = "bulk1"></span></h2>
+          </p>
+          <p><h2>Maximum bulking of sand is observed at : <br>
+            <span id = "bulk2"></span></h2>
+          </p>
+
+      </div>
+      
+  </div>
+
+
+
+  <div class="content" id="flexuralstrength" style="display: none;">
+    <h1>flexural strength</h1>
+
+    <center><iframe width="560" height="315" src="https://www.youtube.com/embed/wI5hFajlrrM" title="YouTube video player"
+     frameborder="0" allow="accelerometer;
+     autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+    </iframe></center>
+    <h2>Flexural strength of concrete is determined by using the formula,<br>
+      F= PL/ bd 2. Here F= Flexural strength of concrete (in MPa),<br>
+      P= Failure load (in N),<br>
+      L= Effective span of the beam (400mm),<br>
+      b= Breadth of the beam (100mm)<h2>
+
+      <div class="form">
+          <form id="concrete">
+            <h2>Flexural strength</h2>
+            <h1>a value in mm</h1><input type="text" id="txta" /> <br>
+			       
+			      <h1>P value in N</h1><input type="text" id="txtP" /> <br>
+			     
+			      <h1>L value in mm</h1><input type="text" id="txtL" /> <br>
+			      
+			      <h1>b value in mm</h1><input type="text" id="txtb" /> <br>
+			       
+			      <h1>d value in mm</h1><input type="text" id="txtd" /> <br>
+            <input class="btn" type="button"  onclick="flexuralstrength()"
+              value="Calculate" />
+			    </form>
+          <p><h2>The Result is in N/mm^2: <br>
+			      <span id="Result1"></span>
+          </p>
+          <p>
+			      <span id="Result2"></span>
+          </p>
+          <p>
+			      <span id="Result3"></span>
+          </p>
+      </div>
+  </div>
+
+
+  <div class="content" id="showflowtable" style="display:none;">
+    <h1>FLOW TABLE TEST</h1>
+    <p class="par">The flow test is performed to measure the workability of concrete.
+      In this test the workability of concrete is measured by examining the flowing property or fluidity of concrete.<br>
+      The flow test is a simple laboratory test. This test works on the principle of a jolting of the standard mass of concrete and measured by the flow of concrete.
+      <br>The flow of concrete indicates the workability of concrete.</p>
+      <center><iframe width="560" height="315" src="https://www.youtube.com/embed/KN-nKeSqDPU" title="YouTube video player" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen></iframe>
+      </center>
+      <h2 style="color: rgba(44, 16, 54, 0.833)" >Flow% = (Spread diameter in cm – 25) /25*100</h2>
+
+
+    <div class="form">
+        <form id="concrete">
+            <h2>FLOW TABLE TEST</h2>
+            <h1>Enter the diameter of the flow 1st direction in cms:</h1> <input type="text"
+            id="Dt1" /><br>
+            <h1>Enter the diameter of the flow 2nd direction in cms:</h1> <input type="text"
+            id="Dt2" /><br>
+            <h1>Enter the diameter of the flow 3rd direction in cms:</h1> <input type="text"
+            id="Dt3" /><br>
+            <h1>Enter the diameter of the flow 4th direction in cms:</h1> <input type="text"
+            id="Dt4" /><br>
+            <h1>Enter the diameter of the flow 5th direction in cms:</h1> <input type="text"
+            id="Dt5" /><br>
+            <h1>Enter the diameter of the flow 6th direction in cms:</h1> <input type="text"
+            id="Dt6" /><br>
+            <h1>Enter the diameter of the flow 7th direction in cms:</h1> <input type="text"
+            id="Dt7" /><br>
+            <h1>Enter the diameter of the flow 8th direction in cms:</h1> <input type="text"
+            id="Dt8" /><br>
+            <input type="button" onClick="FLOWTABLETEST()"
+             Value="calculate" />
+          </form>
+  
+          <p><h2>The Result is : <br>
+            <span id = "ft"></span></h2>
+          </p>
+         
+  
+    </div>
+  </div>
+
+
+
+  <div class="content" id="specificgravityofaggregates" style="display: none;">
+      <h1>specific gravity of aggregates</h1>
+      <p class="par">Specific Gravity is the ratio of the weight of a given volume <br>
+         of aggregate to the weight of an equal volume of water. Water, at a temperature of 73.4°F (23°C) has a <br>
+         specific gravity of  Specific Gravity is important for several reasons.<br>
+         Some deleterious particles are lighter than the good aggregates.</p>
+
+
+        <div class="form">
+          <form id="concrete">
+              <h2>specific gravity of aggregates</h2>
+              <h1>weight of empty pycnometer in (Kg) :</h1> <input type="text"
+              id="valw1" /><br>
+              <h1>weight of pycnometer + dry aggregate in (Kg): </h1><input type="text" 
+              id="valw2" /><br>
+              <h1>weight of pycnometer + dry aggregate + water in (Kg): </h1><input type="text" 
+              id="valw3" /><br>
+              <h1>weight of empty pycnometer + water in (Kg): </h1><input type="text" 
+              id="valw4" /><br>
+              <input class='btn' type="button" onClick="specificgravityofaggregates()" 
+               Value="calculate" />
+            </form>
+  
+            <p><h2>The Result is : <br>
+              <span id = "G"></span></h2>
+            </p>
+  
+        </div>
+
+  </div>
+
+    <div class="content" id="unitweight" style="display: none;">
+      <h1>unit weight of aggregates</h1>
+      <p class="par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt neque 
+        expedita atque eveniet <br> quis nesciunt. Quos nulla vero consequuntur, fugit nemo ad delectus 
+        <br> a quae totamipsa illum minus laudantium?</p>
+  
+  
+        <div class="form">
+          <form id="concrete">
+              <h2>unit weight of aggregates</h2>
+              <h1>weight of empty cylinder in (kg) :</h1> <input type="text"
+              id="valW1" /><br>
+              <h1>weight of cylinder + water in (kg): </h1><input type="text" 
+              id="valW2" /><br>
+              <h1>weight of cylinder + dry aggregate + water in (kg): </h1><input type="text" 
+              id="valW3" /><br>
+              <input class='btn' type="button" onClick="unitweightofaggregates()" 
+               Value="calculate" />
+            </form>
+  
+            <p><h2>The Result is in Kg/m^2: <br>
+              <span id = "Gg"></span></h2>
+            </p>
+  
+        </div>
+    </div>
+
+
+    
+  
+
+</div>
+
+
+
+
+
+
+
+<script>
+  
+  function concretetest() 
+    { 
+      num1 = parseInt(document.getElementById(
+        "firstNumber").value);
+      num2 = parseInt(document.getElementById(
+        "secondNumber").value);
+      num3 = parseInt(document.getElementById(
+        "third number").value);
+      num4 = parseInt(document.getElementById(
+        "fourth number").value);
+      num5 = parseInt(document.getElementById(
+        "fifth number").value);
+
+      
+      area= num1*num2
+      sum= num3+num4+num5;
+      average=(sum)/3;
+      
+
+
+      document.getElementById(
+        "resultloa").innerHTML = (average)/(area)*1000,PerformanceResourceTiming
+    }
+
+    function showconcrete() {
+      var div= document.getElementById('compressivetest')
+			if (div.style.display === 'none') {
+				div.style.display = 'block';
+			} else {
+				div.style.display = 'none';
+			}
+   }
+
+    function Bulkingofsand()
+    {
+      n1 = document.getElementById(
+        "v1").value;
+      n2 = document.getElementById(
+        "1v2").value;
+      n3 = document.getElementById(
+        "2v2").value;
+      n3 = document.getElementById(
+        "3v2").value;
+      n4 = document.getElementById(
+        "4v2").value;
+      n5 = document.getElementById(
+        "5v2").value;
+        val11 = n2-n1;
+        val12 = val11/n1;
+        val13 = val12*100;
+        val21 = n3-n1;
+        val22 = val21/n1;
+        val23 = val22*100; 
+        val31 = n4-n1;
+        val32 = val31/n1;
+        val33 = val32*100;
+        val41 = n5-n1;
+        val42 = val41/n1;
+        val43 = val42*100;
+        var array = [val13, val23, val33, val43 ];
+        var largest= 0;
+
+        for (i=0; i<array.length; i++){
+          if (array[i]>largest) {
+            largest=array[i];
+          }
+        }
+        console.log(largest);
+
+      document.getElementById(
+        "bulk1").innerHTML = largest
+        if (largest==val13){
+          document.getElementById(
+           "bulk2").innerHTML = "4%"
+
+        }  else if (largest==val23) {
+          document.getElementById(
+           "bulk2").innerHTML = "6%"
+
+        } else if (largest==val33) {
+          document.getElementById(
+           "bulk2").innerHTML = "10%"
+          
+        } else if (largest==val43) {
+          document.getElementById(
+           "bulk2").innerHTML = "14%"
+        } else {
+          document.getElementById(
+           "bulk2").innerHTML = "18%"
+        }
+      
+      
+
+    } 
+
+    function showbulkingofsand() {
+      var div= document.getElementById('Bulkingofsand')
+			if (div.style.display === 'none') {
+				div.style.display = 'block';
+			} else {
+				div.style.display = 'none';
+			}
+   }
+
+   
+
+
+    function SpecificGravity() 
+    { 
+      W1 = Number(document.getElementById(
+        "W1").value);
+      W2 = Number(document.getElementById(
+        "W2").value);
+      W3 = Number(document.getElementById(
+        "W3").value);
+      W4 =Number(document.getElementById(
+        "W4").value);
+      W5 =Number(document.getElementById("W5").value);
+        g=W3-W1
+        lo=W5*g
+        s=W5+W3-W4
+        po=W2-W1
+        Sg=s*po 
+
+      document.getElementById(
+        "Sg").innerHTML = lo/Sg
+    }
+    function showsg() {
+      var div= document.getElementById('specificgravity')
+			if (div.style.display === 'none') {
+				div.style.display = 'block';
+			} else {
+				div.style.display = 'none';
+			}
+   }
+    
+    function splittensilestrength() 
+    { 
+      P = document.getElementById(
+        "P").value;
+      D = document.getElementById(
+        "D").value;
+      L= document.getElementById(
+        "L").value;
+      S=(2*P)/(3.14*D*L)
+        
+
+      document.getElementById(
+        "S").innerHTML = S
+    }
+
+    function showsplittensile() {
+      var div= document.getElementById('splittensile')
+			if (div.style.display === 'none') {
+				div.style.display = 'block';
+			} else {
+				div.style.display = 'none';
+			}
+   }
+
+
+
+    function FINESSOFCEMENT() 
+    { 
+      w = document.getElementById(
+        "retainwg").value;
+      w1 = document.getElementById(
+        "retainse").value;
+        val = w1/w;
+      document.getElementById(
+        "result").innerHTML = val*100
+    }
+
+    function showfineness() {
+      var div= document.getElementById('fineness')
+			if (div.style.display === 'none') {
+				div.style.display = 'block';
+			} else {
+				div.style.display = 'none';
+			}
+   }
+    
+    
+
+    function FLOWTABLETEST()
+    { 
+      var Dt11 = Number(document.getElementById(
+        "Dt1").value);
+      var Dt22 = Number(document.getElementById(
+        "Dt2").value);
+      var Dt33 = Number(document.getElementById(
+        "Dt3").value);
+      var Dt44 = Number(document.getElementById(
+        "Dt4").value);
+      var Dt55 = Number(document.getElementById(
+        "Dt5").value);
+      var Dt66 = Number(document.getElementById(
+        "Dt6").value);
+      var Dt77 = Number(document.getElementById(
+        "Dt7").value);
+      var Dt88 = Number(document.getElementById(
+        "Dt8").value);
+        var er= Dt11+Dt22+Dt33+Dt44+Dt55+Dt66+Dt77+Dt88;
+        var Di=er/8;
+        var vall = Di-25;
+        var ftb = vall*100/25;
+      document.getElementById(
+        "ft").innerHTML=ftb
+    }
+
+    function showflowtable() {
+      var div= document.getElementById('showflowtable')
+			if (div.style.display === 'none') {
+				div.style.display = 'block';
+			} else {
+				div.style.display = 'none';
+			}
+   }
+
+
+    function flexuralstrength()
+	  { 
+		  var aval = Number(document.getElementById("txta").value);
+		  var Pval = Number(document.getElementById("txtP").value);
+	  	var Lval = Number(document.getElementById("txtL").value);
+		  var bval = Number(document.getElementById("txtb").value);
+		  var dval = Number(document.getElementById("txtd").value);
+
+      if(aval>=13) {
+
+		    var F = (Pval*Lval)/(bval*dval*dval);
+			      document.getElementById("Result1").innerHTML = +F;
+           
+      } else if(aval==11) {
+		    var F = (3*Pval*aval)/(bval*dval*dval);
+			      document.getElementById("Result2").innerHTML = F;
+
+      } else if(aval==12) {
+		    var F = (3*Pval*aval)/(bval*dval*dval);
+			      document.getElementById("Result2").innerHTML = F;
+            
+      } else if(aval<11) {
+            document.getElementById("Result3").innerHTML ="Discard Result";
+            
+      }
+        else {
+           return "Enter a value"
+            
+      } 
+      
+    }
+
+    function showflexuralstrength() {
+      var div= document.getElementById('flexuralstrength')
+			if (div.style.display === 'none') {
+				div.style.display = 'block';
+			} else {
+				div.style.display = 'none';
+			}
+   }
+
+    function specificgravityofaggregates() 
+    { 
+      var ww1 = Number(document.getElementById(
+        "valw1").value);
+      var ww2 = Number(document.getElementById(
+        "valw2").value);
+      var ww3 = Number(document.getElementById(
+        "valw3").value);
+      var ww4 =Number(document.getElementById(
+        "valw4").value);
+      g=(ww2-ww1);
+      s=((ww4-ww1)-(ww3-ww2));
+      G=g/s
+
+      document.getElementById(
+        "G").innerHTML = G
+    }
+  
+    function showsgc() {
+      var div= document.getElementById('specificgravityofaggregates')
+			if (div.style.display === 'none') {
+				div.style.display = 'block';
+			} else {
+				div.style.display = 'none';
+			}
+    }
+
+    function AggregateCrushingValue() 
+    { 
+      M1 = document.getElementById(
+        "M1").value;
+      M3 = document.getElementById(
+        "M3").value;
+      M2 = document.getElementById(
+        "M2").value;
+     Agg =   M2/M1 * 100
+
+      document.getElementById(
+        "Aggregate Crushing Value").innerHTML = Agg
+    }
+
+    function unitweightofaggregates() 
+    { 
+      var WW1 = Number(document.getElementById(
+        "valW1").value);
+      var WW2 = Number(document.getElementById(
+        "valW2").value);
+      var WW3 = Number(document.getElementById(
+        "valW3").value);
+      g=(WW3-WW1);
+      s=(WW2-WW1);
+      G=g/s
+
+      document.getElementById(
+        "Gg").innerHTML = G
+    }
+
+    function showunitweight() {
+      var div= document.getElementById('unitweight')
+			if (div.style.display === 'none') {
+				div.style.display = 'block';
+			} else {
+				div.style.display = 'none';
+			}
+    }
+    
+    function settingtime() {
+      var div= document.getElementById('settingtime')
+			if (div.style.display === 'none') {
+				div.style.display = 'block';
+			} else {
+				div.style.display = 'none';
+			}
+    }
+
+
+    function showDiv() {
+			var div = document.getElementById('asz');
+
+			if (div.style.display === 'none') {
+				div.style.display = 'block';
+			} else {
+				div.style.display = 'none';
+			}
+		}
+   
+
+
+ 
+ 
+
+ 
+
+</script>

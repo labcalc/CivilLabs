@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Concrete Lab</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<div class="mainlabs">
+    <div class="navbar">
+        <div class="icon">
+            <h2 class="logo">Civil Labs</h2>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><a href="https://civilread.com/iscodes-pdf/"target="_blank"rel="noopener">Code books</a></li>
+                <li><a href="#"></a></li>
+                <li>
+                    <a href = "#">calculators</a>
+                    <ul class="dropdown">
+                        <li><a href="#TE">..</a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </li>
+                <li><a href = "#">About_us</a></li>
+            </ul>
+        </div>
+
+        <div class="search">
+            <input class="srch" type="search" name="" placeholder="Type To text">
+            <a href="#"> 
+            <button class="btn">Search</button></a>
+        </div>
+    </div>
+
+
+    <div class="content">
+        <h1>Impact Test</h1>
+        
+        <p class="par">The impact test is a type of quality control test for highway pavements 
+          <br>that is used to determine the suitability of aggregates for use in highway pavement construction.<br>
+          </p>
+          <center>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/x4ekpMEERxI" 
+                title="YouTube video player" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+            </iframe>
+          </center>
+          <p class="par">1. The test sample consists of aggregates passing 12.5 mm and retained on 10 mm sieve. 
+            <br>Wash the sample and dry at 100 to 110oC for 4 hours and cool to room temperature.
+            
+            <br>2. Fill the cylindrical measure by the aggregate sample in 3 equal layers, each layer being 
+            given 25 tamping. <br>Struck off the aggregate sample by tamping rod weigh and record the 
+            mass of sample (M1).
+            <br>3. Place the impact testing machine with its bottom plate flat on the floor so that hammer 
+            guides are vertical,<br> fix the cup firmly in its position on the base of the machine and transfer 
+            the entire sample in the cup and compact it 25 times.
+            <br>4. Raise the hammer and allow it to fall freely on the aggregates. The sample is subjected 
+            to a total of 15 such blows,<br> each being delivered at an interval of not less than one second.
+            <br>5. Remove the crushed aggregate from the cup and sieve from 2.36 mm sieve. The fraction 
+            passing the sieve is weighed (M2).<br> The fraction retained on the sieve is also weighed (M3). 
+            If M2+M3 differs M1 by more than 1 gm. Discard the results and repeat the test.
+            </p>
+
+
+        <div class="form">
+           <form id="concrete">
+             <h2>impact test</h2>
+             <h1>enter the mass in kgs  :</h1> <input type="text"
+             id="M" /><br>
+             <h1> enter the mass passing through sieve in kgs: </h1><input type="text" 
+             id="V" /><br>
+             <input class='btn' type="button" onClick="impacttest()" 
+              Value="calculate" />
+           </form>
+            <p><h2>The Result is : <br>
+                <span id = "R"></span></h2>
+            </p>
+    
+        </div>
+    
+
+    </div>   
+
+
+
+    <div class="content">
+        <h1>Aggregate Crushing Value</h1>
+        
+        <p class="par">The aggregate crushing value is defined,
+           as a ratio of the weight of fines passing <br>the specified IS sieve to the total weight of the sample expressed as a percentage.
+          </p>
+
+          <center><iframe width="560" height="315" src="https://www.youtube.com/embed/0FzIk9gMReo" title="YouTube video player" 
+            frameborder="0" allow="accelerometer;
+            autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+          </iframe></center>
+
+
+
+        <p class="par">
+          1. The aggregate passing 12.5 mm IS sieve and retained on 10 mm IS sieve is selected for 
+             standard test. The aggregate may be<br> dried by heating at a temperature 100oC to 110 C for a 
+             period of 4 hours and is tested after being cooled to room temperature. <br>The aggregate 
+             should be in surface dry condition before testing.<br>
+          2. The cylindrical measure is filled by the test sample of aggregate in three layers, each 
+             layer being tamped by tamping rod.<br> After the third layer, level the cylinder by tamping rod. 
+             Weigh the sample.<br>
+          3. The cylinder of the test apparatus is placed in position on the base plate and add the test 
+             specimen in three layers of<br> approximately equal depth, each layer being subjected to 25 
+             strokes by tamping rod. Carefully level the <br>surface and insert the plunger so that it rests 
+             horizontally.<br>
+          4. Place the cylinder between the platens of testing machine and apply the load of 400 KN 
+             in 10 min.<br>
+          5. Release the load and remove the crushed aggregate and sieve through 2.36 mm IS sieve 
+             and<br> find the mass of the material passing the sieve.
+        </p>
+
+        <div class="form">
+            <form id="concrete">
+                <h2>Aggregate crushing value </h2>
+                <h1>Total weight of aggregate sample filling the cylindrical measure in grams :</h1>
+                <input type="text"
+                id="M1" /><br>
+                <h1>Weight of aggregate retained on 2.36 mm sieve after the test in grams: </h1>
+                <input type="text" 
+                id="M2" /><br>
+                <input class='btn' type="button" onClick="AggregateCrushingvalue()"
+                 Value="calculate" />
+              </form>
+    
+              <p><h2>The Result is : <br>
+                <span id = "Aggregatecrushingvalue" ></span></h2>
+              </p>
+    
+        </div>
+    
+    
+
+    </div> 
+
+
+    <div class="content">
+      <h1>Penetration Test on Bitumen</h1>
+      
+      <p class="par">Compressive strength is the ability of material or structure to carry the loads on its surface without any crack or deflection.
+        <br>A material under compression tends to reduce the size. 
+        Concrete compressive strength for general construction varies from<br> 15 MPa (2200 psi) to 30 MPa (4400 psi) and higher in commercial and industrial structures.
+        </p>
+
+      <div class="form">
+          <form id="concrete">
+            <h2>Penetration Test on Bitumen</h2>
+
+              <h1>Enter the Trial One Final Penetrometer Dial Reading :</h1> <input type="text"
+              id="PDR1" /><br>
+              <h1>Enter the Trial Second Final Penetrometer Dial Reading : </h1><input type="text" 
+              id="PDR2" /><br>
+              <h1>Enter the Trial Third Final Penetrometer Dial Reading : </h1><input type="text" 
+              id="PDR3" /><br>
+              <input class='btn' type="button" onClick="PenetrationTestonBitumen()"
+               Value="calculate" />
+          </form>
+  
+  
+          <p><h2>The Result is : <br>
+            <span id = "Penetration Value"></span></h2>
+          </p>
+
+  
+      </div>
+  
+  
+
+  </div> 
+    
+
+  <div class="content">
+    <h1>Ductility on Bitumen</h1>
+    
+    <p class="par">Compressive strength is the ability of material or structure to carry the loads on its surface without any crack or deflection.
+      <br>A material under compression tends to reduce the size. 
+      Concrete compressive strength for general construction varies from<br> 15 MPa (2200 psi) to 30 MPa (4400 psi) and higher in commercial and industrial structures.
+      </p>
+
+      <div class="form">
+        <form id="concrete">
+              <h2>Ductility on Bitumen</h2>
+              <h1>Enter the Ductility Valu of the First observation : </h1> <input type="text"
+              id="DFO1" /><br>
+              <h1>Enter the Ductility Valu of the Second observation : </h1><input type="text" 
+              id="DFO2" /><br>
+              <h1>Enter the Ductility Valu of the Third observation : </h1><input type="text" 
+              id="DFO3" /><br>
+              <input class='btn' type="button" onClick="DuctilityonBitumen()"
+               Value="calculate" />
+        </form>
+  
+          <p><h2>The Result is : <br>
+            <span id = "suma"></span></h2>
+          </p>
+                
+      
+      </div>
+  
+
+
+
+</div>
+    
+    
+
+
+
+</div>
+
+
+<script>
+
+
+function  impacttest() 
+    { 
+      M = document.getElementById(
+        "M").value;
+      V = document.getElementById(
+        "V").value;
+      R=V/M
+        
+
+      document.getElementById(
+        "R").innerHTML = R*100
+    }
+
+function AggregateCrushingvalue() 
+    { 
+      M1 = Number(document.getElementById(
+        "M1").value);
+      M2 = Number(document.getElementById(
+        "M2").value);
+      ACV = M2/M1*100;
+
+      document.getElementById(
+        "Aggregatecrushingvalue").innerHTML = ACV
+    }
+
+
+   
+function PenetrationTestonBitumen()
+    { 
+      PDR1 = document.getElementById(
+        "PDR1").value;
+      PDR2 = document.getElementById(
+        "PDR2").value;
+      PDR3= document.getElementById(
+        "PDR3").value;
+      M = PDR1- 0
+      H = PDR2- 0
+      A=  PDR3- 0
+       sum = M + H + A 
+       Avg =sum/3
+       PenetrationValue = Avg/10 
+
+   
+      document.getElementById(
+        "Penetration Value").innerHTML = PenetrationValue
+    }
+
+function DuctilityonBitumen()
+    { 
+        a = Number(document.getElementById(
+        "DFO1").value);
+        b = Number(document.getElementById(
+        "DFO2").value);
+        c = Number(document.getElementById(
+        "DFO3").value);
+      sum = a+b+c ;
+      
+      document.getElementById(
+        "suma").innerHTML = sum
+    }
+
+
+
+
+</script>
